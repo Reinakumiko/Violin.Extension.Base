@@ -12,15 +12,8 @@ namespace Violin.Extension
 	{
 		static void Main(string[] args)
 		{
-			try
-			{
-				var builder = new SampleExtensionBuilder();
-				ExtensionLoader.LoadDirectory<SampleExtensionBuilder>(builder, "./plugins");
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(ex.ToString());
-			}
+			var builder = new SampleExtensionBuilder();
+			ExtensionLoader.LoadDirectory<SampleExtensionBuilder>(builder, "./plugins");
 
 			Console.ReadLine();
 		}

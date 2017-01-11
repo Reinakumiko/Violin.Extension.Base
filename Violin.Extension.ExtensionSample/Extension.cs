@@ -36,13 +36,14 @@ namespace Violin.Extension.ExtensionSample
 
 			var listObject = new { JsonKey1 = "JsonValue1", Key2 = "Value2" };
 
-
+			//扩展程序引用程序集测试
 			var jsonString = JsonConvert.SerializeObject(listObject);
 			var jObject = JsonConvert.DeserializeObject(jsonString);
 			Console.WriteLine("Write JObject: {0}", jObject);
 
-			//Console.WriteLine("Throw Exception.");
-			//throw new Exception();
+			//扩展程序异常抛出测试
+			Console.WriteLine("Throw Exception.");
+			throw new Exception();
 		}
 	}
 }
