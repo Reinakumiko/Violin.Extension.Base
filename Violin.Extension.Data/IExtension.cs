@@ -17,9 +17,9 @@ namespace Violin.Extension.Data
 		void Start();
 
 		/// <summary>
-		/// 设置扩展程序的基本应用配置(继承自 Violin.Extension.Data.IExtension 接口)
+		/// 设置扩展程序的应用配置
 		/// </summary>
-		/// <param name="builder">扩展程序的配置类</param>
+		/// <param name="builder">需要使用的配置类型</param>
 		void Configuration(IExtensionBuilder builder);
 	}
 
@@ -30,9 +30,9 @@ namespace Violin.Extension.Data
 	public interface IExtension<T> : IExtension where T : IExtensionBuilder
 	{
 		/// <summary>
-		/// 设置扩展程序的应用配置
+		/// 设置扩展程序的基本应用配置(继承自 <see cref="IExtension"/>  接口)
 		/// </summary>
-		/// <param name="builder">需要使用的配置类型</param>
+		/// <param name="builder">扩展程序的配置类</param>
 		void Configuration(T builder);
 	}
 }
